@@ -1,0 +1,17 @@
+.Nav {
+    background-color:$colour-nav;
+    grid-area: n;
+    height: auto-fit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+//@media all and (max-width: 480px){
+@media all and (max-width: 700px){
+	.Nav{
+        flex-direction: column;
+        padding: 1em 0em 1em 0em;//TRBL
+    }
+}

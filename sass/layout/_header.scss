@@ -1,0 +1,114 @@
+//pading TRBL
+.homeheader {
+    grid-area: h;
+	height: auto-fit;
+    display: flex;
+    background-color:$colour-header;       
+    flex-direction: column;
+    align-items: center;
+    padding: $grid-gutter $grid-gutter 0 $grid-gutter;
+
+    &_PhotoContainer {
+        min-width: 20em;
+        max-width: 50em;
+        animation: home-picture 4000ms backwards ease-in-out alternate;
+        animation-iteration-count: 2;
+        animation-delay: 5000ms;
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        &__picture{
+            width: 275px;
+            height: 275px;
+        }
+    }  
+       
+    &_Intro {
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+        font-size: 2.5em;
+        line-height: 0em;
+        letter-spacing: -0.05em;
+        word-spacing: 0em;
+        font-weight: 600;
+        text-transform: lowercase;
+        text-justify: center;
+        color: $Colour-firstname; 
+        &__secondname{
+            font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+            font-size: 0.9em;
+            font-weight: 100;
+            letter-spacing: -0.1em;
+            text-transform: lowercase;
+            color: $Colour-secondname;
+        }
+        &__JobDescription{
+            color: $Colour-text;
+            font-weight:600;
+            line-height: 0em;
+            padding: 0.3em 0em 1em 0.5em//TRBL
+        }
+    }
+}
+
+@keyframes home-picture{
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1) rotate(360deg);
+    }
+}
+
+.header {
+    grid-area: h;
+	height: auto-fit;
+    display: flex;
+    background-color:$colour-header;       
+    flex-direction: row;
+    align-items: left;
+    padding: $grid-gutter $grid-gutter 0 $grid-gutter;
+
+    &_PhotoContainer {
+        padding: 0em 1.5em 1em 2em; //TRBL
+        min-width: 20em;
+        max-width: 50em;
+        &__picture{
+            width: 155px;
+            height: 155px;
+        }
+    }  
+       
+    &_Intro {
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+        font-size: 1.75em;
+        line-height: 0em;
+        letter-spacing: -0.05em;
+        word-spacing: 0em;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: $Colour-firstname;
+        padding: 2.75em 0em 0em 4em; //TRBL
+        &__secondname{
+            font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+            font-size: 0.9em;
+            font-weight: 100;
+            letter-spacing: -0.1em;
+            text-transform: lowercase;
+            color: $Colour-secondname;
+        }
+        &__JobDescription{
+            color: $Colour-text;
+            font-weight:600;
+            line-height: 0em;
+            padding: 0.3em 1em 1em 0.5em; //TRBL
+        }
+    }
+}
+
+//@media all and (max-width: 480px){
+    @media all and (max-width: 700px){
+        .header_Intro {
+            padding: 2.75em 0em 0em 0em; //TRBL
+        }
+    }

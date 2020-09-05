@@ -1,0 +1,147 @@
+.container {
+    background-color:$colour-content;
+    grid-area: c;
+    padding: $grid-gutter $grid-gutter 0 $grid-gutter;
+   		
+    &_heading{
+        text-transform: uppercase;
+        padding: 0.3em 0em 0.2em 3em;//TRBL
+        animation: move-title 2000ms 500ms both;
+        width: 14em;
+    }
+            
+    &_byline{
+        display:flex;
+        flex-direction: row;
+        color: $Colour-text;
+        list-style-type: none;
+        font-size: 1.5em;
+        padding: 1.2em 0em 2em 4em;//TRBL
+
+        &__TimePlace{
+            min-width:120px;
+            max-width:120px;
+            font-weight: 600;
+            display: list-item;
+            list-style-type: circle;
+            flex-basis: 8em;
+            padding: 1.2em 0em 0em 2em;//TRBL
+        }
+        &__Content{
+            flex-basis: 1fr;
+            min-width:200px;
+            text-align: justify;
+        }
+        &__Entities{
+            text-transform: uppercase;
+            font-weight:100;
+            margin-left:0.5em;
+        }
+        &__PositionTitle{
+            font-size: 0.8em;
+            padding-left:2em;   
+        }
+    }
+
+    &_line{
+        font-size: 1.5em;
+        padding: .5em 0em 0.5em 2em;//TRBL
+    }
+
+    &_contacts{
+        font-size: 1.5em;
+        margin-left:9em;
+        &__Tittle{
+           font-weight:600;
+        }
+        &__Text{
+           font-size:0.9em;
+           padding-left:0.5em;
+        }
+    }
+    
+    &_RefTittle{
+        text-transform: uppercase;
+        padding: 0em 0em 0.2em 3em;//TRBL
+        animation: move-title 2000ms 500ms both;
+        max-width: 7em;
+    }
+
+    &_References{
+        font-size: 1.4em;
+        &_Personas { 
+            margin-left:3em;
+            max-width: 50em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            &__person{
+                border-bottom: 0.05em solid $Colour-text;
+            }
+        }
+    }
+} 
+
+@keyframes move-title{
+    0% {
+        transform: translateX(-40%) Scale(1);
+        opacity: 0;
+    }
+    85%,100% {
+        opacity: 1;
+
+    }
+    100% {
+        transform: translateX(100%) Scale(1.4);
+    }
+}
+
+.icons{
+    animation: move-icon 2000ms 1000ms both;
+}
+
+@keyframes move-icon{
+    0% {
+        transform: translate(-50px,40px) Scale(1);
+        opacity: 0;
+    }
+    85%,100% {
+        opacity: 1;
+
+    }
+    100% {
+        transform: translate(130px, 30px) Scale(2) rotate(720deg);
+    }
+}
+
+//@media all and (max-width: 480px){
+@media all and (max-width: 700px){
+    .container {
+        padding-bottom: 3em;
+        &_byline{
+            padding: 1.2em 0em 0em 1em;//TRBL
+            &__TimePlace{
+                padding: 1.2em 0em 0em 1em;//TRBL
+            }
+            &__PositionTitle{
+                padding-left:1em;   
+            }
+        }
+    
+        &_line{
+            padding: .5em 0em 0.5em 1em;//TRBL
+        }
+    
+        &_contacts{
+            margin-left:4em;
+        }
+    
+        &_References_Personas {
+                padding-bottom: 1em;
+                margin-left:3em;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+        }
+    } 
+}  

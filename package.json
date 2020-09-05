@@ -1,0 +1,19 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "\"CV\"",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reinaldodsf/Resume.git"
+  },
+  "author": "Reinaldo Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reinaldodsf/Resume/issues"
+  },
+  "homepage": "https://github.com/Reinaldodsf/Resume#readme"
+}

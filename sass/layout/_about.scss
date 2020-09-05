@@ -1,0 +1,52 @@
+.About {
+    grid-area: a;
+    background-color:$colour-about;
+    height: auto-fit;
+
+    &_Sidenotes__Text {
+        font-size: 1.7em;
+        text-align: center;
+        color: $Colour-text;
+        padding: 0em 5em 0.2em 5em;//TRBL
+    }
+    &_Tittle{
+        font-size: 1.5em;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        color: $Colour-bodytext;
+    }
+	&_hobbies__icons{
+        font-size: 2.5em;
+        text-align: center;
+        padding-bottom: 0.8em;
+        color: $Colour-text;
+    }
+}
+
+.homeicons{
+    padding: 0em 2em 0em 2em;//TRBL 
+    &:hover{
+        animation: move-homeicon 2000ms both;
+    }
+}
+
+@keyframes move-homeicon{
+    0% {
+        transform: Scale(1);
+    }
+    100% {
+        transform: Scale(2) rotate(720deg);
+    }
+}
+
+//@media all and (max-width: 480px){
+@media all and (max-width: 700px){
+    .About_Sidenotes__Text {
+        width:430px;
+        padding: 0em 1em 0em 1em;
+    }
+    .homeicons{
+        padding: 1em;
+    }
+}  
