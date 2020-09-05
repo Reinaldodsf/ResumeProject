@@ -1,0 +1,70 @@
+//@media all and (max-width: 480px){
+@media all and (max-width: 700px){
+    .body{
+        flex-direction: row;
+    }
+
+    .Nav__link{
+        padding: 0.5em 9em 0.44em 9em;//TRBL
+        &--active {
+            height: 0em;
+            padding: 0em;
+        }
+    }
+    
+    .About_Sidenotes__Text {
+        width:auto;
+        padding: 0em 2em 0em 2em;
+    }
+
+    .homeicons{
+        padding: 1em;
+    }
+
+    .container {
+        padding-bottom: 3em;
+        &_byline{
+            padding: 1.2em 0em 0em 1em;//TRBL
+            &__TimePlace{
+                padding: 1.2em 0em 0em 1em;//TRBL
+            }
+            &__PositionTitle{
+                padding-left:1em;   
+            }
+        }
+        
+        &_line{
+            padding: .5em 0em 0.5em 1em;//TRBL
+        }
+        
+        &_contacts{
+            margin-left:4em;
+        }
+        
+        &_References_Personas {
+            padding-bottom: 1em;
+            margin-left:3em;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        } 
+    }
+    
+    .header_Intro {
+        padding: 2.75em 0em 0em 0em; //TRBL
+        &__secondname{
+            letter-spacing: 0em;
+        }
+    }      
+
+    .homeheader_Intro {
+        &__secondname{
+            letter-spacing: 0em;
+        }
+    }  
+
+    .Nav{
+        flex-direction: column;
+        padding: 1em 0em 1em 0em;//TRBL
+    }
+}

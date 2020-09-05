@@ -23,14 +23,3 @@
         }
     }
 }
-
-//@media all and (max-width: 480px){
-    @media all and (max-width: 700px){
-        .Nav__link{
-            padding: 0.5em 9em 0.44em 9em;//TRBL
-            &--active {
-                height: 0em;
-                padding: 0em;
-            }
-        }
-    }

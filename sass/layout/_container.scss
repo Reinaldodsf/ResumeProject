@@ -113,35 +113,3 @@
         transform: translate(130px, 30px) Scale(2) rotate(720deg);
     }
 }
-
-//@media all and (max-width: 480px){
-@media all and (max-width: 700px){
-    .container {
-        padding-bottom: 3em;
-        &_byline{
-            padding: 1.2em 0em 0em 1em;//TRBL
-            &__TimePlace{
-                padding: 1.2em 0em 0em 1em;//TRBL
-            }
-            &__PositionTitle{
-                padding-left:1em;   
-            }
-        }
-    
-        &_line{
-            padding: .5em 0em 0.5em 1em;//TRBL
-        }
-    
-        &_contacts{
-            margin-left:4em;
-        }
-    
-        &_References_Personas {
-                padding-bottom: 1em;
-                margin-left:3em;
-                width: 300px;
-                display: flex;
-                flex-direction: column;
-        }
-    } 
-}  

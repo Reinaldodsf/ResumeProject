@@ -14,10 +14,3 @@ body {
     ;
     background-color: $colour-content;
 }
-
-//@media all and (max-width: 480px){
-@media all and (max-width: 700px){
-	.body{
-		flex-direction: row;
-    }
-}
