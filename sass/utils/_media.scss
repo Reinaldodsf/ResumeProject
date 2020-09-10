@@ -1,32 +1,78 @@
-//@media all and (max-width: 480px){
-@media all and (max-width: 700px){
+@media all and (max-device-width: 480px) {
+    html {
+        // 10px div by def of 16px
+        font-size: 100%;
+    }
+
     .body{
         flex-direction: row;
     }
 
-    .Nav__link{
-        padding: 0.5em 9em 0.44em 9em;//TRBL
-        &--active {
-            height: 0em;
-            padding: 0em;
+    .homeheader{
+        &_Intro {
+            &__firstname {
+                font-size:3.5em;
+            }
+            &__secondname{
+                letter-spacing: 0em;
+            }
+            &__JobDescription{
+                font-size: -2em;
+                text-align:center;          
+            }
         }
-    }
-    
-    .About_Sidenotes__Text {
-        width:auto;
-        padding: 0em 2em 0em 2em;
+
+        &_PhotoContainer {    
+            &__picture{
+                width: 500px;
+                height: 500px;
+            }
+        }  
     }
 
     .homeicons{
-        padding: 1em;
+        padding: 1em 2em 2em 2em;
+    }
+
+    .header{
+        &_Intro {
+            padding: 0.5em 0em 1em 2em; //TRBL
+            &__secondname{
+                letter-spacing: 0em;
+            }
+        }      
+    }
+
+    .About{
+        &_Sidenotes__Text {
+            width: auto;
+            padding: 0em 2em 0em 2em;
+            font-size: 2em;
+        }   
+        &_Tittle{
+            padding-top:3em;
+        }
     }
 
     .container {
         padding-bottom: 3em;
+        &_subtittle{
+            font-size:2em;
+            padding-top:2em;
+            padding-bottom:2em;
+        }
+        &_RefSubTittle{
+            font-size:2em;
+            padding-top:0.7em;
+            padding-bottom: 1em;
+        }
         &_byline{
-            padding: 1.2em 0em 0em 1em;//TRBL
+            flex-direction: column;
+            padding: 1.2em 0em 0em 1em;
             &__TimePlace{
-                padding: 1.2em 0em 0em 1em;//TRBL
+                max-width:20em;
+                max-height: 5em;
+                padding: 1.2em 1em 0em 0em;
             }
             &__PositionTitle{
                 padding-left:1em;   
@@ -34,7 +80,7 @@
         }
         
         &_line{
-            padding: .5em 0em 0.5em 1em;//TRBL
+            padding: .5em 0em 0.5em 1em;
         }
         
         &_contacts{
@@ -43,28 +89,149 @@
         
         &_References_Personas {
             padding-bottom: 1em;
-            margin-left:3em;
+            margin-left: 14em;
             width: 300px;
-            display: flex;
-            flex-direction: column;
+            &__person {
+                min-width: 350px;
+            }
         } 
     }
     
-    .header_Intro {
-        padding: 2.75em 0em 0em 0em; //TRBL
-        &__secondname{
-            letter-spacing: 0em;
+    @keyframes move-subtitle{
+        0% {
+            transform: translateX(-40%) Scale(1);
+            opacity: 0;
         }
-    }      
-
-    .homeheader_Intro {
-        &__secondname{
-            letter-spacing: 0em;
+        85%,100% {
+            opacity: 1;
+    
         }
-    }  
-
-    .Nav{
-        flex-direction: column;
-        padding: 1em 0em 1em 0em;//TRBL
+        100% {
+            transform: translateX(50%) Scale(1.4);
+        }
     }
+
+    .icons{
+        font-size:2.5em;    
+    }
+      
+    @keyframes move-icon{
+        0% {
+            transform: translate(-50px, 120px) Scale(1);
+            opacity: 0;
+        }
+        85%,100% {
+            opacity: 1;
+    
+        }
+        100% {
+            transform: translate(130px, 120px) Scale(2) rotate(720deg);
+        }
+    }
+    
+    .Page_Tittle{
+        float: left;
+        font-size: 3em;
+        padding: 0.4em;
+        margin-left: 5.5em;
+        margin-top: 2em;
+    }
+    
+    @keyframes move-title{
+        //translate(41%, 5%)
+        0% {
+            transform: scale(1);
+            opacity: 0;
+        }
+        85%,100% {
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.1);
+        }
+    }
+
+    .HomeNav{
+        flex-direction: column;
+        height: 45em;
+    }
+
+    //START
+    #drawer-toggle {
+        position: relative; 
+        opacity: 0.8; 
+        &-label { 
+            -webkit-touch-callout: none; 
+            -webkit-user-select: none; 
+            -khtml-user-select: none; 
+            -moz-user-select: none; 
+            -ms-user-select: none; 
+            user-select: none; 
+            float: right;
+            top: 10px;
+            left: 0px; 
+            height: 36px; 
+            width: 50px; 
+            display: block; 
+            position: relative; 
+            z-index: 1; 
+            /* adds our "hamburger" menu icon */   
+            &:before { 
+                content: "";
+                display: block; 
+                position: relative; 
+                height: 2px; 
+                width: 24px; 
+                top:-5px;
+                left: 13px; 
+                box-shadow: 0 6px 0 $Colour-secondname, 0 12px 0 $Colour-secondname, 0 18px 0 $Colour-secondname;
+            }
+        } 
+    }
+    
+    /* drawer menu pane - note the 0px width */   
+    .box { 
+        position:relative;
+        float: right;
+        left: 50px;
+        top: -800px;
+        height: 350px;
+        width: 10px;
+        background: $colour-navrgba; 
+        overflow-x: hidden; 
+        overflow-y: scroll; 
+        padding: 20px; 
+        -webkit-overflow-scrolling: touch; 
+        z-index: 1;
+    }
+
+    #drawer { 
+        /* checked styles (menu open state) */ 
+        &-toggle:checked ~ #drawer-toggle-label { 
+            left: -275px;
+            height: 36px;
+            width: 24px;      
+        }
+
+        &-toggle:checked ~ .box { 
+            left: 25px;
+            top: 0px;
+            width: 210px;
+        } 
+    }
+
+    .box{
+        & ul { 
+            list-style-type:none;
+            font-size: 0.5em; 
+            display: contents;
+        } 
+
+        & a { 
+            display:block; 
+            padding:10px; 
+            color: $colour-header; 
+            text-decoration:none;
+        } 
+    } 
 }

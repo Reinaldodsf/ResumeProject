@@ -68,16 +68,6 @@
     flex-direction: row;
     align-items: left;
     padding: $grid-gutter $grid-gutter 0 $grid-gutter;
-
-    &_PhotoContainer {
-        padding: 0em 1.5em 1em 2em; //TRBL
-        min-width: 20em;
-        max-width: 50em;
-        &__picture{
-            width: 155px;
-            height: 155px;
-        }
-    }  
        
     &_Intro {
         font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
@@ -88,7 +78,7 @@
         font-weight: 600;
         text-transform: lowercase;
         color: $Colour-firstname;
-        padding: 2.75em 0em 0em 4em; //TRBL
+        padding: 0.5em 0em 1em 4em; //TRBL
         &__secondname{
             font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
             font-size: 0.9em;
@@ -101,7 +91,7 @@
             color: $Colour-text;
             font-weight:600;
             line-height: 0em;
-            padding: 0.3em 1em 1em 0.5em; //TRBL
+            padding: 0.3em 1em 0em 3em; //TRBL
         }
     }
 }

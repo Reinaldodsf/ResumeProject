@@ -1,12 +1,12 @@
 .container {
     background-color:$colour-content;
     grid-area: c;
-    padding: $grid-gutter $grid-gutter 0 $grid-gutter;
-   		
-    &_heading{
+    padding: 0 $grid-gutter $grid-gutter $grid-gutter;
+    
+    &_subtittle{
         text-transform: uppercase;
         padding: 0.3em 0em 0.2em 3em;//TRBL
-        animation: move-title 2000ms 500ms both;
+        animation: move-subtitle 2000ms 500ms both;
         width: 14em;
     }
             
@@ -24,7 +24,7 @@
             font-weight: 600;
             display: list-item;
             list-style-type: circle;
-            flex-basis: 8em;
+            flex-basis: 1em;
             padding: 1.2em 0em 0em 2em;//TRBL
         }
         &__Content{
@@ -50,6 +50,7 @@
 
     &_contacts{
         font-size: 1.5em;
+        margin-top:2em;
         margin-left:9em;
         &__Tittle{
            font-weight:600;
@@ -60,10 +61,10 @@
         }
     }
     
-    &_RefTittle{
+    &_RefSubTittle{
         text-transform: uppercase;
         padding: 0em 0em 0.2em 3em;//TRBL
-        animation: move-title 2000ms 500ms both;
+        animation: move-subtitle 2000ms 500ms both;
         max-width: 7em;
     }
 
@@ -82,7 +83,7 @@
     }
 } 
 
-@keyframes move-title{
+@keyframes move-subtitle{
     0% {
         transform: translateX(-40%) Scale(1);
         opacity: 0;
