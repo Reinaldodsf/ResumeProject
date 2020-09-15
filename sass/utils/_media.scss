@@ -70,9 +70,9 @@
             flex-direction: column;
             padding: 1.2em 0em 0em 1em;
             &__TimePlace{
-                max-width:20em;
+                max-width: 35em;
                 max-height: 5em;
-                padding: 1.2em 1em 0em 0em;
+                padding: 1.2em 1em 2em 0em;
             }
             &__PositionTitle{
                 padding-left:1em;   
@@ -168,7 +168,7 @@
             -ms-user-select: none; 
             user-select: none; 
             float: right;
-            top: 10px;
+            top: -27px;
             left: 0px; 
             height: 36px; 
             width: 50px; 
@@ -184,7 +184,7 @@
                 width: 24px; 
                 top:-5px;
                 left: 13px; 
-                box-shadow: 0 6px 0 $Colour-secondname, 0 12px 0 $Colour-secondname, 0 18px 0 $Colour-secondname;
+                box-shadow: 0 6px 0 $colour-nav, 0 12px 0 $colour-nav, 0 18px 0 $colour-nav;
             }
         } 
     }
@@ -208,7 +208,7 @@
     #drawer { 
         /* checked styles (menu open state) */ 
         &-toggle:checked ~ #drawer-toggle-label { 
-            left: -275px;
+            left: -260px;
             height: 36px;
             width: 24px;      
         }
@@ -216,7 +216,7 @@
         &-toggle:checked ~ .box { 
             left: 25px;
             top: 0px;
-            width: 210px;
+            width: 190px;
         } 
     }
 
